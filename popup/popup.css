@@ -1,0 +1,222 @@
+/* VocabPro Popup Styles */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  color: #111827;
+  background: #fff;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.p-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px 10px;
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  border-bottom: 1px solid #d1fae5;
+}
+.p-brand { display: flex; align-items: center; gap: 10px; }
+.p-logo {
+  width: 32px; height: 32px;
+  background: #059669;
+  color: #fff;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 800;
+}
+.p-title { font-size: 14px; font-weight: 700; color: #064e3b; }
+.p-sub   { font-size: 10px; color: #6b7280; }
+
+.p-badge {
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+}
+.p-badge.ok   { background: #dcfce7; color: #16a34a; border-color: #bbf7d0; }
+.p-badge.warn { background: #fef9c3; color: #ca8a04; border-color: #fde68a; }
+
+/* ── Section ────────────────────────────────────────────────── */
+.p-section { padding: 10px 14px 6px; }
+.p-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.p-hr { height: 1px; background: #f3f4f6; margin: 0 14px; }
+
+/* ── Row ────────────────────────────────────────────────────── */
+.p-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.p-key-row { align-items: flex-start; flex-direction: column; gap: 4px; }
+.p-label { font-size: 12px; color: #374151; white-space: nowrap; min-width: 70px; }
+
+/* ── Toggle group ───────────────────────────────────────────── */
+.p-grp {
+  display: flex;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.p-tog {
+  flex: 1;
+  padding: 5px 10px;
+  background: #f9fafb;
+  border: none;
+  border-right: 1px solid #e5e7eb;
+  cursor: pointer;
+  font-size: 11px;
+  color: #374151;
+  transition: background .12s, color .12s;
+}
+.p-tog:last-child { border-right: none; }
+.p-tog:hover { background: #f3f4f6; }
+.p-tog.active {
+  background: #059669;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── Input ──────────────────────────────────────────────────── */
+.p-input-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+.p-input {
+  flex: 1;
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  color: #111827;
+  background: transparent;
+}
+.p-input-full {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #111827;
+  outline: none;
+}
+.p-input-full:focus, .p-input:focus { border-color: #059669; }
+.p-eye {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 8px;
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1;
+}
+.p-eye:hover { color: #374151; }
+
+/* ── ElevenLabs key list ────────────────────────────────────── */
+.p-el-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 10px 6px;
+  margin-bottom: 6px;
+  position: relative;
+}
+.p-el-item-head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.p-el-idx {
+  font-size: 10px;
+  font-weight: 700;
+  color: #6b7280;
+  min-width: 40px;
+}
+.p-rm-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #9ca3af;
+  padding: 2px 6px;
+  border-radius: 6px;
+  line-height: 1;
+  margin-left: auto;
+}
+.p-rm-btn:hover { background: #fee2e2; color: #ef4444; }
+
+.p-add-btn {
+  width: 100%;
+  padding: 6px;
+  background: #f0fdf4;
+  border: 1px dashed #6ee7b7;
+  border-radius: 8px;
+  color: #059669;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  transition: background .15s;
+}
+.p-add-btn:hover { background: #dcfce7; }
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.p-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+}
+.p-save {
+  padding: 7px 18px;
+  background: #059669;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background .15s;
+}
+.p-save:hover { background: #047857; }
+.p-save-msg { font-size: 12px; color: #16a34a; }
+
+/* ── Auth section ───────────────────────────────────────────── */
+.p-auth {
+  padding: 6px 14px 12px;
+  border-top: 1px solid #f3f4f6;
+}
+.p-auth-link { font-size: 12px; color: #2563eb; text-decoration: none; }
+.p-auth-link:hover { text-decoration: underline; }
+.p-auth-ok { font-size: 12px; color: #16a34a; margin-right: 8px; }
+.p-logout {
+  font-size: 11px;
+  padding: 3px 10px;
+  background: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #6b7280;
+}
+.p-logout:hover { background: #fef2f2; border-color: #fca5a5; color: #ef4444; }

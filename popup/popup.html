@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>VocabPro</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="p-header">
+    <div class="p-brand">
+      <div class="p-logo">V</div>
+      <div>
+        <div class="p-title">VocabPro</div>
+        <div class="p-sub">Lookup · TTS · Translate</div>
+      </div>
+    </div>
+    <div id="auth-badge" class="p-badge">…</div>
+  </div>
+
+  <!-- Section: Dịch thuật -->
+  <div class="p-section">
+    <div class="p-section-title">🌐 Dịch thuật</div>
+
+    <div class="p-row">
+      <span class="p-label">Chiều dịch</span>
+      <div class="p-grp" id="dir-grp">
+        <button class="p-tog" data-val="en-vi">EN → VI</button>
+        <button class="p-tog" data-val="vi-en">VI → EN</button>
+      </div>
+    </div>
+
+    <div class="p-row">
+      <span class="p-label">Engine</span>
+      <div class="p-grp" id="engine-grp">
+        <button class="p-tog" data-val="google">Google</button>
+        <button class="p-tog" data-val="gemini">Gemini AI</button>
+      </div>
+    </div>
+
+    <div id="gemini-row" class="p-row p-key-row" style="display:none">
+      <span class="p-label">Gemini Key</span>
+      <div class="p-input-wrap">
+        <input type="password" id="gemini-key" class="p-input" placeholder="AIzaSy…" autocomplete="off" />
+        <button class="p-eye" id="gemini-eye">👁</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-hr"></div>
+
+  <!-- Section: TTS -->
+  <div class="p-section">
+    <div class="p-section-title">🔊 Text-to-Speech</div>
+
+    <div class="p-row">
+      <span class="p-label">Giọng đọc</span>
+      <div class="p-grp" id="tts-grp">
+        <button class="p-tog" data-val="webspeech">Web Speech</button>
+        <button class="p-tog" data-val="elevenlabs">ElevenLabs</button>
+      </div>
+    </div>
+
+    <div id="el-rows" style="display:none">
+      <div id="el-key-list"></div>
+      <button id="el-add-btn" class="p-add-btn">＋ Thêm key</button>
+    </div>
+  </div>
+
+  <!-- Section: Lookup -->
+  <div class="p-section">
+    <div class="p-section-title">📖 Lookup</div>
+    <div class="p-row">
+      <span class="p-label">Nghĩa tiếng Việt</span>
+      <div class="p-grp" id="vndef-grp">
+        <button class="p-tog" data-val="show">Hiện</button>
+        <button class="p-tog" data-val="hide">Ẩn</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-hr"></div>
+
+  <!-- Footer: Save + Auth -->
+  <div class="p-footer">
+    <button id="save-btn" class="p-save">Lưu cài đặt</button>
+    <span id="save-msg" class="p-save-msg"></span>
+  </div>
+
+  <div class="p-auth">
+    <div id="auth-out" style="display:none">
+      <a href="https://vocab.vtd26.io.vn/login" target="_blank" class="p-auth-link">Đăng nhập để lưu từ vựng →</a>
+    </div>
+    <div id="auth-in" style="display:none">
+      <span class="p-auth-ok">✓ Đã đăng nhập</span>
+      <button id="logout-btn" class="p-logout">Đăng xuất</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
